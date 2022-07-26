@@ -1,0 +1,290 @@
+$panel_backcolor: #23272A;
+$default_background: rgba(44,41,33,1);
+$feature_image_shadow: inset 0 0 25px 5px $panel_backcolor;
+
+html {
+    background-color: $default_background;
+}
+
+body {
+    background-color: $default_background;
+    color: white;
+
+    .white_link {
+        color: white;
+    }
+    img {
+        width: auto;
+    }
+    div.server_connect_button:hover{
+        background-color: rgba(84,107,188,1);
+        transition-duration: 0.2s;
+    }
+    div.server_connect_button:active{
+        background-color: rgba(64,87,168,1);
+    }
+    div.server_connect_button {
+        background-color: #7289DA;
+        transition-duration: 0.2s;
+
+        img {
+            width: 40px;
+            display: inline-block;
+            vertical-align: bottom;
+        }
+
+        span {
+            font-size: 20pt;
+            color: white;
+        }
+    }
+    div.server_detail_button:hover{
+        background-color: rgba(225,225,225,1);
+        transition-duration: 0.2s;
+    }
+    div.server_detail_button:active{
+        background-color: rgba(205,205,205,1);
+    }
+    div.server_detail_button {
+        font-size: 20pt;
+        padding: 10px 20px;
+        background-color: white;
+        transition-duration: 0.2s;
+    }
+    div.server_detail_button, div.server_connect_button{
+        text-align: center;
+        display: inline-block;
+        padding: 10px 20px;
+        border-radius: 10px;
+        margin: 3px;
+    }
+    .for_mobile {
+        display: none;
+    }
+    .light-small-text {
+        color: rgba(235,235,235,0.6);
+        font-size: 80%;
+    }
+    .light-text {
+        color: rgba(235,235,235,0.6);
+    }
+
+    nav {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 99;
+
+        ul{
+            li.nav_connect_server:before {
+                content: "";
+                background-image: url(../../images/Discord-Logo-White.png);
+                background-size: contain;
+                display: inline-block;
+                height: 40px;
+                width: 40px;
+                position: absolute;
+                margin-top: 10px;
+            }
+
+            li.nav_connect_server{
+                div {
+                    display: inline-block;
+
+                    a {
+                        display: inline-block;
+                        font-size: 130%;
+                        text-indent: 40px;
+                        line-height: 40px;
+                        position: relative;
+                    }
+                }
+            }
+
+        }
+    }
+
+    div.main_content {
+        max-width: 1100px;
+        margin: 0px auto;
+        margin-top: 64px;
+        background-image: url(../../images/2020-10-04%20221533.png);
+        background-repeat: repeat-y;
+
+        div.top_bannar {
+            display: block;
+            height: 40vh;
+            width: 100%;
+
+            h1 {
+                font-size: 36pt;
+                position: relative;
+                top: 20%;
+                width: 90%;
+                left: 6%;
+                color: white;
+                word-break: break-all;
+            }
+
+            div.server_connect_button_holder {
+                position: relative;
+                top: 25%;
+                text-align: center;
+
+            }
+        }
+
+        div.panel {
+            background-color: $panel_backcolor;
+            padding-top: 20px;
+            border-radius: 40px;
+            padding: 5px;
+
+            p.first {
+                font-weight: 500;
+                font-size: 125%;
+                margin-bottom: 0px;
+            }
+
+            p {
+
+            }
+        }
+
+        div.hr_space {
+            height: 10px;
+            width: 100%;
+        }
+
+        div#feature {
+            padding-bottom: 30px;
+
+            div.space_hr {
+                width: 100%;
+                height: 30px;
+            }
+
+            section {
+                margin-top: 30px;
+                margin-bottom: 30px;
+
+                div.feature_description {
+                    width: 48%;
+                    display: inline-block;
+
+                    h3, p {
+                        display: inline-block;
+                        word-wrap: break-word;
+                        word-break: break-all;
+                    }
+                }
+
+                div.feature_description_wide {
+                    width: 95%;
+                    margin: 0px auto;
+                }
+
+                div.feature_image {
+                    position: relative;
+                    min-height: 100%;
+                    width: 49%;
+
+                    div.feature_image_holder{
+                        overflow: hidden;
+
+                        img{
+                            max-height: 100%;
+                        }
+                    }
+                }
+
+                div.feature_image:after {
+                    position: absolute;
+                    display: block;
+                    content: "";
+                    top: 0px;
+                    left: 0px;
+                    width: 100%;
+                    height: 100%;
+                    box-shadow: $feature_image_shadow,
+                                $feature_image_shadow,
+                                $feature_image_shadow,
+                                $feature_image_shadow,
+                                $feature_image_shadow;
+                }
+
+                h3 {
+                    font-size: 180%;
+                }
+            }
+
+            section.layout_a {
+                overflow: hidden;
+
+                div.feature_description {
+                    margin-right: 20px;
+                }
+
+                div.feature_image{
+                    float: right;
+                }
+            }
+
+            section.layout_b {
+                overflow: hidden;
+
+                div.feature_description {
+                    margin-left: 20px;
+                }
+
+                div.feature_image{
+                    float: left;
+
+                    div.feature_image_holder{
+
+                        img{
+                            margin-left: auto;
+                            float: right;
+                        }
+                    }
+                }
+            }
+            
+            p[class="center"] {
+                font-size: 140%;
+                font-weight: 800;
+                font-style: italic;
+            }
+        }
+
+        div#conclusion {
+            width: 90%;
+            margin: 0px auto;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            padding-bottom: 20px;
+
+            p.conclusion_p {
+                font-size: 150%;
+            }
+            div.conclusion_b {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        footer {
+            background-color: $default_background;
+            padding-top: 30px;
+            padding-bottom: 20px;
+
+            ul {
+                list-style-type: square;
+                color: rgba(235,235,235,0.6)
+            }
+            p{
+                font-size: 110%;
+            }
+        }
+    }
+}
