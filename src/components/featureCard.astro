@@ -1,0 +1,79 @@
+---
+interface Props {
+  imageSrc: string;
+  width: number;
+  height: number;
+}
+
+import { Picture } from "@astrojs/image/components";
+
+const { imageSrc, width, height } = Astro.props;
+---
+
+<section>
+  <div class="heading">
+    <slot />
+  </div>
+  <div class="image">
+    <Picture
+      src={imageSrc}
+      widths={[width]}
+      sizes={`${width}x${height}`}
+      alt=""
+      aspectRatio={`${width}:${height}`}
+      formats={["avif", "webp", "png"]}
+    />
+  </div>
+</section>
+
+<style lang="scss" define:vars={{ aspectRatioPer: `${height / width * 100}%` }}>
+  @use "../styles/default" as def;
+
+  section {
+    display: contents;
+  }
+  .heading {
+    grid-column: 1/6;
+
+    @media all and (max-width: 900px) {
+      grid-column: 1/-1;
+    }
+  }
+
+  .image {
+    grid-column: 6/-1;
+    display: grid;
+    place-items: center;
+
+    @media all and (max-width: 900px) {
+      grid-column: 1/-1;
+    }
+
+    :global(picture) {
+      display: block;
+      position: relative;
+      width: 100%;
+      padding-bottom: var(--aspectRatioPer);
+
+      img {
+        width: 100%;
+        position: absolute;
+      }
+
+      &::after {
+        position: absolute;
+        display: block;
+        content: "";
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        box-shadow: inset 0 0 25px 5px def.$default_background,
+          inset 0 0 25px 5px def.$default_background,
+          inset 0 0 25px 5px def.$default_background,
+          inset 0 0 25px 5px def.$default_background,
+          inset 0 0 25px 5px def.$default_background;
+      }
+    }
+  }
+</style>

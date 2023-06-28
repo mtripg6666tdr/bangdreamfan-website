@@ -1,0 +1,51 @@
+---
+import LinkButton from "./linkButton";
+import discordLogo from "../images/discord-logo.svg";
+---
+
+<div>
+  <LinkButton client:load href="https://myon.page.link/bang" className="button">
+    <img src={discordLogo.src} alt="" />
+    <span>サーバーに参加</span>
+  </LinkButton>
+  <LinkButton client:load href="https://disboard.org/ja/server/745078585387253851" className="white">
+    <span>DISBOARDでみる</span>
+  </LinkButton>
+</div>
+
+
+<style lang="scss">
+  div {
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    @media all and (max-width: 900px) {
+      flex-direction: column;
+    }
+
+    .button, .white {
+      img {
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        vertical-align: middle;
+        margin: 8px;
+      }
+
+      span {
+        line-height: 2rem;
+        font-size: 1.6rem;
+        vertical-align: middle;
+        font-weight: 400;
+      }
+    }
+
+    .white span {
+      margin: 8px;
+      display: inline-block;
+    }
+  }
+</style>

@@ -1,0 +1,54 @@
+---
+import LinkButton from "./linkButton";
+import discordLogo from "../images/discord-logo.svg";
+---
+<div class="banner">
+  <h1>バンドリ！をもっと楽しむための、<br />Discord コミュニティ</h1>
+  <p>バンドリーマーのために作られた多機能コミュニティサーバーで、雑談・情報共有をして、もっとバンドリを楽しみましょう。</p>
+  <div>
+    <LinkButton client:load href="https://myon.page.link/bang" className="button">
+      <img src={discordLogo.src} alt="" />
+      <span>サーバーに参加</span>
+    </LinkButton>
+  </div>
+</div>
+
+<style lang="scss">
+  .banner {
+    display: contents;
+
+    h1 {
+      grid-column: 2/-2;
+      margin-top: 2em;
+      margin-bottom: 0em;
+      font-size: 2.6rem;
+      line-height: 1.6;
+    }
+
+    p {
+      grid-column: 2/-2;
+    }
+
+    div {
+      grid-column: 1/-1;
+      text-align: center;
+
+      .button {
+        img {
+          display: inline-block;
+          width: 2rem;
+          height: 2rem;
+          vertical-align: middle;
+          margin: 8px;
+        }
+
+        span {
+          line-height: 2rem;
+          font-size: 1.6rem;
+          vertical-align: middle;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+</style>

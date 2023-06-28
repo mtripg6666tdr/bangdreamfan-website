@@ -1,0 +1,49 @@
+---
+interface Props {
+  question: string;
+}
+const { question } = Astro.props;
+---
+
+<section itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <h3 itemprop="name">Q. {question}</h3>
+  <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+    <p itemprop="text">A.</p>
+    <slot />
+  </div>
+</section>
+
+<style lang="scss">
+  section {
+    display: contents;
+
+    &>h3 {
+      margin: 0;
+      font-size: 1.3rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 2px solid white;
+      line-height: 1.6;
+    }
+
+    &>div {
+      margin-bottom: 4rem;
+    }
+
+    &>h3, &>div {
+      grid-column: 2/-2;
+
+      @media all and (max-width: 900px) {
+        grid-column: 1/-1;
+      }
+    }
+
+    :global(p) {
+      margin: 0.5rem 0;
+      line-height: 1.7;
+    }
+
+    :global(a){
+      color: white;
+    }
+  }
+</style>

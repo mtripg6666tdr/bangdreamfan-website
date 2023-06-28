@@ -1,0 +1,43 @@
+{
+  "name": "bangdreamfan-website",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "lint": "eslint \"src/**/*.{astro,tsx,ts}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mtripg6666tdr/bangdreamfan-website.git"
+  },
+  "keywords": [],
+  "author": "mtripg6666tdr",
+  "bugs": {
+    "url": "https://github.com/mtripg6666tdr/bangdreamfan-website/issues"
+  },
+  "homepage": "https://github.com/mtripg6666tdr/bangdreamfan-website#readme",
+  "devDependencies": {
+    "@astrojs/image": "^0.17.1",
+    "@astrojs/react": "^2.2.1",
+    "@mtripg6666tdr/eslint-config": "^1.0.14",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "astro": "^2.7.1",
+    "astro-compress": "^1.1.47",
+    "astro-critters": "^1.1.38",
+    "astro-google-fonts-optimizer": "^0.2.2",
+    "astro-purgecss": "^2.2.0",
+    "eslint": "^8.43.0",
+    "eslint-plugin-astro": "^0.27.2",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "ripplet.js": "^1.1.0",
+    "sass": "^1.63.6"
+  }
+}

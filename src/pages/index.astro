@@ -1,0 +1,217 @@
+---
+import Banner from "../components/banner.astro";
+import Card from "../components/card.astro";
+import FeatureCard from "../components/featureCard.astro";
+import FinalButtons from "../components/finalButtons.astro";
+import Footer from "../components/footer.astro";
+import QaCard from "../components/qaCard.astro";
+import channelImg from "../images/channels.png";
+import newsImg from "../images/news.png";
+import roleImg from "../images/roles.png";
+import todayImg from "../images/today.png";
+import Layout from "../layouts/layout.astro";
+---
+
+<Layout>
+  <Banner />
+  <Card title="特長" class="feat">
+    <FeatureCard
+      imageSrc={newsImg.src}
+      width={newsImg.width}
+      height={newsImg.height}
+    >
+      <h3>Twitter, YouTubeからのニュースチャンネル</h3>
+      <p>
+        ほかのサーバーでは類を見ない、複数の公式アカウントが閲覧できるチャンネルを用意しており、
+        バンドリ！プロジェクト関連のニュースのほとんどを確認できます。
+        <br />
+        これでもう重要な更新を見逃すことはありません。
+      </p>
+    </FeatureCard>
+    <FeatureCard
+      imageSrc={todayImg.src}
+      width={todayImg.width}
+      height={todayImg.height}
+    >
+      <h3>「今日の予定」機能</h3>
+      <p>
+        毎日朝に配信される、バンドリ！プロジェクトのスケジュールで、その日の予定を再確認できます。
+      </p>
+    </FeatureCard>
+    <FeatureCard
+      imageSrc={channelImg.src}
+      width={channelImg.width}
+      height={channelImg.height}
+    >
+      <h3>洗練され、見やすい構成</h3>
+      <p>
+        常にサーバーのチャンネル構成には気を配っており、だれでも見やすくなるよう、配慮しています。
+        <br />
+        煩雑な認証作業は不要で、参加したその時から、ファンとの交流や、ガルパのライブ結果の共有などを行えます。
+      </p>
+
+      <h3>雑談チャンネルも完備。</h3>
+      <p>バンドリファンと気軽に交流ができる場所として、汎用的な雑談チャンネルも用意しています。</p>
+    </FeatureCard>
+    <FeatureCard
+      imageSrc={roleImg.src}
+      width={roleImg.width}
+      height={roleImg.height}
+    >
+      <h3>バンド・メンバー名ロールも完備。</h3>
+      <p>
+        バンドリ！プロジェクトに登場する、多くのバンド・およびそれぞれのメンバー名のロールを完備。
+        自分自身にロールをつけることで、好きなバンドやメンバーをアピールできます。
+      </p>
+      <p>
+      ロールはボットによる自動付与ができるようになっているため、サーバー運営とのコンタクトは不要です。
+      </p>
+      現在、以下のバンドのロールを用意しています。
+      <ul>
+        <li>Poppin&apos;Party</li>
+        <li>Afterglow</li>
+        <li>Pastel＊Palettes</li>
+        <li>Roselia</li>
+        <li>ハローハッピーワールド</li>
+        <li>Morfonica</li>
+        <li>RAISE A SUILEN</li>
+        <li>MyGO!!!!!</li>
+        <li>Ave Mujica</li>
+        <li>Glitter*Green</li>
+        <li>CHiSPA</li>
+      </ul>
+    </FeatureCard>
+    <section>
+      <h3>ボイスチャンネル・音楽ボットも完備</h3>
+      <p>
+        雑談や、ガルパの協力ライブ、イベントの同時視聴などに閊えるボイスチャンネルも完備。
+        <br />
+        また、音楽ボット導入により、いつでも音楽を楽しめます。
+      </p>
+    </section>
+  </Card>
+  <Card title="よくある質問" class="qa">
+    <QaCard question="これはバンドリ！（ガルパ）の公式サーバーですか？">
+      <p itemprop="text">
+        このサーバーは、バンドリ！やガルパの公式サーバーではなく、完全非公式で運営されています。
+        <br />
+        公式サーバーに関しては、
+        <a
+          href="https://twitter.com/bang_dream_gbp/status/1630540532345892864"
+          target="_blank"
+          rel="noreferrer noopener">こちら</a>
+        からご確認いただけます。
+        <span class="tp">
+          (なお、厳密にいうと、公式サーバーはすでに
+          <a
+            href="https://twitter.com/bang_dream_gbp/status/1673262447904567298"
+            target="_blank"
+            rel="noreferrer noopener">公式サーバーではなくなっています。</a>
+          )
+        </span>
+      </p>
+    </QaCard>
+    <QaCard question="バンドリ！について興味はありますが、まだ初心者です。">
+      <p itemprop="text">
+        このサーバーは、バンドリ！が好きなファンが誰でも楽しめるように作られていますので、
+        知識があまりないことを心配する必要はありません。
+      </p>
+    </QaCard>
+    <QaCard question="バンドリ！は好きですが、ゲームはしていません。">
+      <p itemprop="text">
+        バンドリ！が好きだからと言って、ゲームをやっていないといけないという決まりはありません。
+        <br />
+        このサーバーは、どちらかというと、ガルパではなくバンドリ！プロジェクトそのものに焦点を当てていますので、
+        楽曲に興味がある、あるいは、単純にキャラクターが好きな方にもピッタリのサーバーです。
+      </p>
+    </QaCard>
+    <QaCard question="激しいサーバーですか？">
+      <p itemprop="text">
+        まったくもって激しいサーバーではありません。アットホームな雰囲気を目指し、誰でも気軽に会話ができるよう配慮をしています。
+      </p>
+    </QaCard>
+    <QaCard question="不明点があります／意見・要望などがあります">
+      <p itemprop="text">
+        ご不明点や、サーバーに対するご意見・ご要望、その他のお問い合わせがある場合は、
+        サーバー内の
+        <a
+          href="https://discord.com/channels/745078585387253851/762216541638754324"
+          target="_blank"
+          rel="noreferrer noopener"
+        >＃ご意見・ご要望／相談所</a>
+        チャンネル、もしくは
+        <a
+          href="mailto:contact@usamyon.moe"
+        >メール</a>
+        などで受け付けております。お気軽にお知らせください。
+      </p>
+    </QaCard>
+  </Card>
+  <Card title="サーバーで、バンドリ！をもっと楽しみませんか？" class="end">
+    <p>まずはサーバーに参加から！</p>
+    <FinalButtons />
+  </Card>
+  <Footer />
+</Layout>
+
+<style lang="scss">
+  .feat {
+    h3 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 1rem 0.4rem;
+      line-height: 1.5;
+    }
+
+    p {
+      line-height: 1.9;
+      margin: 1.7rem 0 2.2rem 0;
+    }
+
+    h3, p {
+      letter-spacing: 0.05rem;
+    }
+
+    ul {
+      li {
+        margin: 0.4rem 0;
+      }
+    }
+
+    section {
+      display: contents;
+
+      h3 {
+        grid-column: 1/-1;
+        margin: 0;
+        text-align: center;
+      }
+
+      p {
+        grid-column: 1/-1;
+
+        &:nth-child(2) {
+          margin-top: 0;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .qa {
+    .tp {
+      opacity: 0.6;
+    }
+  }
+
+  .end {
+    :global(h2) {
+      margin: 0;
+    }
+
+    p {
+      grid-column: 1/-1;
+      text-align: center;
+    }
+  }
+</style>
