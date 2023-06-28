@@ -1,0 +1,22 @@
+---
+import Base from "./base.astro";
+import NavBar from "../components/navBar.astro";
+---
+<Base>
+  <NavBar />
+  <main>
+    <slot />
+  </main>
+</Base>
+
+<style>
+  main {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+    gap: 24px;
+    background-image: url("../images/bg.webp");
+  }
+</style>

@@ -1,0 +1,41 @@
+---
+import discordLogo from "../images/discord-logo.svg";
+---
+
+<nav>
+  <span class="title">BanG Dream!ファン！☆</span>
+  <a class="link" href="https://myon.page.link/bang">
+    <img src={discordLogo.src} alt="Discord" />
+  </a>
+</nav>
+
+<style lang="scss">
+  nav {
+    $NAV_HEIGHT: 4rem;
+    height: $NAV_HEIGHT;
+    background-color: #111;
+    position: relative;
+
+    &>.title {
+      line-height: $NAV_HEIGHT;
+      font-size: 150%;
+      margin-left: 1rem;
+      position: absolute;
+    }
+
+    &>.link {
+      $ICON_WIDTH: 2.6rem;
+      display: block;
+      height: $ICON_WIDTH;
+      width: $ICON_WIDTH;
+      float: right;
+      margin: ($NAV_HEIGHT - $ICON_WIDTH) * 0.5;
+
+      img {
+        width: 100%;
+        height: 100%;
+        vertical-align: middle;
+      }
+    }
+  }
+</style>

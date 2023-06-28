@@ -1,0 +1,56 @@
+---
+import twitter from "../images/twitter.svg";
+---
+<footer>
+  <ul>
+    <li>外国語には対応していません。また、日本国外版のガルパには対応していません。</li>
+    <li>サーバーは株式会社ブシロード様や株式会社Craft Eggとは無関係で、完全非公式による運営です。</li>
+  </ul>
+  <div>
+    <a href="https://twitter.com/bang_dream_com" target="_blank" rel="noreferrer noopener">
+      <img src={twitter.src} alt="Twitter" />
+    </a>
+  </div>
+  <p>
+    &copy; BanG Dream!ファン！
+  </p>
+</footer>
+
+<style lang="scss">
+  @use "../styles/default" as def;
+
+  footer {
+    grid-column: 1/-1;
+    background-color: def.$default_background;
+
+    ul {
+      li {
+        color: rgba(235,235,235,0.6);
+        margin: 0.6rem 0;
+      }
+    }
+
+    div {
+      text-align: center;
+
+      a {
+        display: inline-block;
+        transition: opacity 0.3s;
+
+        img {
+          width: 2.5rem;
+          height: 2.5rem;
+        }
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+
+    p {
+      margin: 0.4rem 0 1.6rem 0;
+      text-align: center;
+    }
+  }
+</style>

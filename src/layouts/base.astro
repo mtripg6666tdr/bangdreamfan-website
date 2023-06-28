@@ -1,0 +1,65 @@
+---
+import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
+const title = "BanG Dream!ファン！☆ Discordサーバー";
+const description = "BanG Dream!ファン！☆はバンドリファンのためのDiscordサーバーです。バンドリファンと繋がれるだけでなく、最新情報をまとめて確認することができるなど、機能満載！ぜひ今すぐ参加して、バンドリファンで盛り上がりましょう！一緒にキラキラドキドキしませんか？";
+const keywords = [
+  "BanG Dream!",
+  "バンドリ",
+  "Discordサーバー",
+  "BanG Dream!ファン！",
+  "ガルパ",
+  "ガールズバンドパーティー！",
+  "Discord",
+  "ファンサーバー",
+  "サーバー",
+  "Discordサーバー",
+];
+const ogImage = "https://bangdreamfan.usamyon.moe/images/banner02_2_1.png";
+---
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content={description}>
+    <meta name="keywords" content={keywords.join(",")}>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@bang_dream_com">
+    <meta name="twitter:creator" content="@mtripg6666tdr">
+    <meta property="twitter:image" content={ogImage}>
+    <meta property="og:title" content={title}>
+    <meta property="og:description" content={description}>
+    <meta property="og:image" content={ogImage}>
+    <title>{title}</title>
+    <link rel="canonical" href="https://bangdreamfan.usamyon.moe/">
+    <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="/images/bb354dea5eacaa9679b2caf66548d09a.png">
+    <GoogleFontsOptimizer url="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style lang="scss" is:global>
+  @use "../styles/default" as def;
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+
+    background-color: def.$default_background;
+    font-family: 'BIZ UDPGothic', sans-serif;
+    color: #eeeeee;
+    letter-spacing: 0.04rem;
+    line-height: 1.6;
+  }
+
+  p {
+    margin: 0;
+  }
+</style>

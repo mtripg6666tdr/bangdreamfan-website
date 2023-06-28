@@ -1,3 +1,0 @@
-src/materialize/* linguist-vendored
-src/scripts/jquery.js linguist-vendored
-*.min.js linguist-vendored
