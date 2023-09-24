@@ -1,10 +1,11 @@
 ---
 import LinkButton from "./linkButton";
+import { serverUrl } from "../definition";
 import discordLogo from "../images/discord-logo.svg";
 ---
 
 <div>
-  <LinkButton client:load href="https://myon.page.link/bang" className="button">
+  <LinkButton client:load href={serverUrl} className="button">
     <img src={discordLogo.src} alt="" />
     <span>サーバーに参加</span>
   </LinkButton>

@@ -1,12 +1,13 @@
 ---
 import LinkButton from "./linkButton";
+import { serverUrl } from "../definition";
 import discordLogo from "../images/discord-logo.svg";
 ---
 <div class="banner">
   <h1>バンドリ！をもっと楽しむための、<br />Discord コミュニティ</h1>
   <p>バンドリーマーのために作られた多機能コミュニティサーバーで、雑談・情報共有をして、もっとバンドリを楽しみましょう。</p>
   <div>
-    <LinkButton client:load href="https://myon.page.link/bang" className="button">
+    <LinkButton client:load href={serverUrl} className="button">
       <img src={discordLogo.src} alt="" />
       <span>サーバーに参加</span>
     </LinkButton>
