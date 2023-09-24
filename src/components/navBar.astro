@@ -1,10 +1,11 @@
 ---
 import discordLogo from "../images/discord-logo.svg";
+import { serverUrl } from "../definition";
 ---
 
 <nav>
   <span class="title">BanG Dream!ファン！☆</span>
-  <a class="link" href="https://myon.page.link/bang">
+  <a class="link" href={serverUrl}>
     <img src={discordLogo.src} alt="Discord" />
   </a>
 </nav>
